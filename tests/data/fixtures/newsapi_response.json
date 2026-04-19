@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "totalResults": 2,
+  "articles": [
+    {
+      "title": "Apple reports record iPhone sales in Q4",
+      "description": "Apple Inc reported record quarterly iPhone sales beating analyst expectations.",
+      "publishedAt": "2024-01-15T10:00:00Z",
+      "source": {"name": "Reuters"}
+    },
+    {
+      "title": "AAPL stock rises on strong earnings guidance",
+      "description": "Apple shares climbed after the company raised its forward guidance citing strong demand.",
+      "publishedAt": "2024-01-15T09:00:00Z",
+      "source": {"name": "Bloomberg"}
+    }
+  ]
+}

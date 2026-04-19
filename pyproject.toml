@@ -1,0 +1,51 @@
+[project]
+name = "market-pulse"
+version = "0.1.0"
+description = "Async LLM-powered financial market intelligence CLI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.9",
+    "anthropic>=0.28",
+    "apscheduler>=3.10",
+    "diskcache>=5.6",
+    "duckdb>=0.10",
+    "praw>=7.7",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "polars>=0.20",
+    "python-dotenv>=1.0",
+    "rich>=13.7",
+    "typer>=0.12",
+    "vaderSentiment>=3.3",
+    "weasyprint>=62",
+    "yfinance>=0.2",
+]
+
+[project.scripts]
+pulse = "market_pulse.cli.app:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/market_pulse"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "mypy>=1.10",
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "respx>=0.21",
+    "ruff>=0.4",
+]
